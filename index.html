@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fitness Tracker</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#activity">Activity Tracking</a></li>
+            <li><a href="#workout">Workout Logging</a></li>
+        </ul>
+    </nav>
+
+    <section id="profile">
+        <h2>Profile</h2>
+        <div id="login-signup">
+            <button onclick="showLogin()">Login</button>
+            <button onclick="showSignup()">Sign Up</button>
+        </div>
+        <div id="profile-info"></div>
+    </section>
+
+    <section id="activity">
+        <h2>Activity Tracking</h2>
+        <p>Track your steps, calories, and more.</p>
+        <!-- Future activity tracking will go here -->
+    </section>
+
+    <section id="workout">
+        <h2>Workout Logging</h2>
+        <form id="workout-form">
+            <label for="workout">Enter your workout:</label>
+            <input type="text" id="workout" name="workout" required>
+            <button type="submit">Log Workout</button>
+        </form>
+        <div id="workout-log"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
