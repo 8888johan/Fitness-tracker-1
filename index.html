@@ -1,73 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness Tracker</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Fitness Tracker</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#activity">Activity Tracking</a></li>
-            <li><a href="#workout">Workout Logging</a></li>
-        </ul>
-    </nav>
-
-    <section id="profile">
-        <h2>Profile</h2>
-        <div id="login-signup">
-            <button onclick="showLogin()">Login</button>
-            <button onclick="showSignup()">Sign Up</button>
-        </div>
-        <div id="profile-info"></div>
-    </section>
-
-    <section id="activity">
-        <h2>Activity Tracking</h2>
-        <p>Track your steps, calories, and more.</p>
-        <!-- Future activity tracking will go here -->
-    </section>
-
-    <section id="workout">
-        <h2>Workout Logging</h2>
-        <form id="workout-form">
-            <label for="workout">Enter your workout:</label>
-            <input type="text" id="workout" name="workout" required>
-            <button type="submit">Log Workout</button>
-        </form>
-        <div id="workout-log"></div>
-    </section>
-
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>Fitness Tracker</h1>
+    <form id="exercise-form">
+      <input type="text" id="exercise" placeholder="Exercise Name" required>
+      <input type="number" id="duration" placeholder="Duration (minutes)" required>
+      <button type="submit">Add Exercise</button>
+    </form>
+    <ul id="exercise-list"></ul>
+  </div>
+  <script src="script.js"></script>
 </body>
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyALinPEmQ102OV9Y5NuX2XxYbSgJGoTDZc",
-      authDomain: "fitness-tracker-8ec36.firebaseapp.com",
-      projectId: "fitness-tracker-8ec36",
-      storageBucket: "fitness-tracker-8ec36.appspot.com",
-      messagingSenderId: "292158869858",
-      appId: "1:292158869858:web:471535bb3c771891639c3b",
-      measurementId: "G-1Y03SLL5KD"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
-  </script>
 </html>
